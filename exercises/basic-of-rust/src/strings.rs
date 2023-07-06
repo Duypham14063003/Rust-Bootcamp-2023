@@ -46,8 +46,8 @@ fn is_palindrome(word: &str) -> bool {
 // Exercise 6
 // Count the occurrences of a character in a string
 fn count_char_occurrences(string: &str, ch: char) -> usize {
-    let size = string.len();
-
+    let res = string.chars().into_iter().filter(|c| c == &ch).count();
+    res
 }
 
 #[cfg(test)]
